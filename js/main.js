@@ -8,6 +8,20 @@ let themeSelect = document.querySelector("#themeSelect");
 themeSelect.oninput =  ()=>{ switchTheme(themeSelect.value); }
 switchTheme(localStorage.getItem("theme") || "dark");
 
+/* Google Search */
+let searchBox = document.querySelector("#searchInput");
+let searchBtn = document.querySelector("#searchBtn");
+
+searchBtn.addEventListener("click", ()=>{
+    if(searchBox.value.trim() !== ""){
+        location.href = `https://google.com/search?q=${searchBox.value.trim()}`;
+    }  
+});
+
+searchBox.addEventListener("keydown", (e)=>{
+    if(e.code == "Enter") searchBtn.click()
+});
+
 /* Utils (Stuff I copied from StackOverflow) */
 function escapeString(html) {
     let p = document.createElement('p');
@@ -23,6 +37,8 @@ function checkURL(url) {
     '(\\?[;&amp;a-z\\d%_.~+=-]*)?'+ // query string
     '(\\#[-a-z\\d_]*)?$','i').test(url);
 }
+
+
  
 
 

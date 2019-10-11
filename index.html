@@ -17,14 +17,14 @@
     <!--Google search bar @ the top-->
     <div class="searchbox" id="searchbox">
         <div class="logo-container">
-            <a href="https://google.com"><img class="logo" src="assets/g-logo.png"></a>
+            <a title="Go to Google." href="https://google.com"><img class="logo" src="assets/g-logo.png"></a>
         </div>
         <div class="input-container">
-            <input type="text" id="search" placeholder="Search Google">
-            <button class="input-button"><i class="material-icons-round">search</i></button>
+            <input title="Search the web." type="text" id="searchInput" placeholder="Search Google">
+            <button class="input-button" id="searchBtn"><i class="material-icons-round">search</i></button>
         </div>
         <div class="menu-container">
-                <i id="launchStore" class="material-icons-round">store</i>
+            <i id="launchStore" title="Check out the store." class="material-icons-round">store</i>
         </div>
     </div>
 
@@ -41,14 +41,14 @@
     <div class="link-container">
         <div id="userLinks"></div>
         <div class="quicklink new">
-            <span id="createLinkDialog" class="title">Create a new link.</span>
+            <span title="Add a link." id="createLinkDialog" class="title">Create a new link.</span>
         </div>
     </div>
 
     <!--Theme manager-->
     <div class="theme-palette">
         <h3 class="theme-select">Theme: 
-            <select id="themeSelect" name="themes">
+            <select id="themeSelect" name="themes" title="Change your color scheme.">
                 <option value="dark" selected>Default Dark</option>
                 <option value="light">Default Light</option>
                 <option value="solarized-dark">Solarized Dark</option>
@@ -64,11 +64,11 @@
         <h1>Add a link.</h1>
         <div class="input-field">
             <h2>Title:</h2>
-            <input id="linkTitleBox" type="text" placeholder="Type stuff here...">
+            <input title="Link title." id="linkTitleBox" type="text" placeholder="Type stuff here...">
         </div>
         <div class="input-field">
             <h2>Link:</h2>
-            <input id="linkURLBox" type="text" placeholder="Type stuff here...">
+            <input title="Link URL" id="linkURLBox" type="text" placeholder="Type stuff here...">
         </div>
         <button id="addLink">Okay!</button>
         <button id="cancelNewLink">Nevermind.</button>

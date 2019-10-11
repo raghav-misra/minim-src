@@ -46,7 +46,7 @@
     height: 100%;
 }
 
-.searchbox  #search{
+.searchbox  .input-container input{
     flex: 1;
     vertical-align: top;
     padding: 10px;
