@@ -1,0 +1,80 @@
+/* Search Bar */
+.searchbox{
+    transition: 0.25s ease-in-out background;
+    padding: 10px;
+    display: flex;
+    height: 70px;
+    background: var(--back-accent);
+}
+
+.searchbox div, .searchbox a{ background: transparent; }
+
+.searchbox .logo-container{
+    height: 100%;
+    margin-right: 10px;
+}
+
+.searchbox .logo{
+    width: 50px;  
+    transition: 0.5s transform ease-in-out;
+    border-radius: 50%;
+    background: none;
+}
+
+.searchbox .logo:hover{
+    transform: rotate(720deg)
+}
+
+.searchbox .input-container{
+    font-size: 0;
+    flex: 1;
+    display: flex;
+    text-align: center;
+    padding: 5px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.searchbox .input-button{
+    width: 50px;
+    height: 100%;
+}
+
+.searchbox .input-button i{
+    background: none;
+    width: 100%;
+    height: 100%;
+}
+
+.searchbox  #search{
+    flex: 1;
+    vertical-align: top;
+    padding: 10px;
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.searchbox .menu-container{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.searchbox .menu-container i{
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    color: var(--text);
+    padding: 10px;
+    background: none;
+    transition: color 0.25s ease-in;
+}
+
+.searchbox .menu-container i:hover{
+    color: var(--accent);
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--CSS OVERRIDE-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/links.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/store.css">
+    <!--END CSS OVERRIDE-->
+    <title>New Tab</title>
+</head>
+<body theme="dark">
+    <!--Google search bar @ the top-->
+    <div class="searchbox" id="searchbox">
+        <div class="logo-container">
+            <a href="https://google.com"><img class="logo" src="assets/g-logo.png"></a>
+        </div>
+        <div class="input-container">
+            <input type="text" id="search" placeholder="Search Google">
+            <button class="input-button"><i class="material-icons-round">search</i></button>
+        </div>
+        <div class="menu-container">
+                <i id="launchStore" class="material-icons-round">store</i>
+        </div>
+    </div>
+
+    <!--Store window (modal)-->
+    <div class="store-overlay"><div class="store-window">
+        <h1>
+            Upgrade Store:
+            <i id="closeMenu" class="close material-icons-round">close</i>
+        </h1>
+        
+    </div></div>
+
+    <!--Contains all links/bookmarks-->
+    <div class="link-container">
+        <div id="userLinks"></div>
+        <div class="quicklink new">
+            <span id="createLinkDialog" class="title">Create a new link.</span>
+        </div>
+    </div>
+
+    <!--Theme manager-->
+    <div class="theme-palette">
+        <h3 class="theme-select">Theme: 
+            <select id="themeSelect" name="themes">
+                <option value="dark" selected>Default Dark</option>
+                <option value="light">Default Light</option>
+                <option value="solarized-dark">Solarized Dark</option>
+                <option value="solarized-light">Solarized Light</option>
+                <option value="monochrome">Monochrome</option>
+                <option value="hot-dog-stand">Hot Dog Stand :D</option>
+            </select>
+        </h3>
+    </div>
+
+    <!--Create links dialog-->
+    <div class="link-overlay"><div id="linkPrompt" class="link-prompt">
+        <h1>Add a link.</h1>
+        <div class="input-field">
+            <h2>Title:</h2>
+            <input id="linkTitleBox" type="text" placeholder="Type stuff here...">
+        </div>
+        <div class="input-field">
+            <h2>Link:</h2>
+            <input id="linkURLBox" type="text" placeholder="Type stuff here...">
+        </div>
+        <button id="addLink">Okay!</button>
+        <button id="cancelNewLink">Nevermind.</button>
+    </div></div>
+    
+    <!--JS OVERRIDE-->
+    <script src="js/keyframer.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/links.js"></script>
+    <script src="js/store.js"></script>
+    <!--END JS OVERRIDE-->
+</body>
+</html>

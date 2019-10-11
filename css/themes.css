@@ -1,0 +1,86 @@
+/* Themes */
+body{
+    transition: 0.25s ease-in-out background;
+
+    /* Default Vars */
+    --delete: rgb(238, 65, 65);
+    --font: 'Inconsolata', monospace;
+    --error: rgb(238, 65, 65);
+    --success: rgb(47, 163, 47);
+}
+
+body[theme=dark]{
+    --text: white;
+    --back: rgb(61, 71, 83);
+    --back-accent: rgb(35, 42, 51);
+    --accent: cornflowerblue;
+}
+
+body[theme=light]{
+    --text: rgb(61, 71, 83);
+    --back: white;
+    --accent: lightcoral;
+    --back-accent: rgb(221, 221, 221);
+}
+
+body[theme=solarized-dark]{
+    --text: #FDF6E3;
+    --back-accent: #002B36;
+    --back: #073642;
+    --accent: #6C71C4;
+}
+
+body[theme=solarized-light]{
+    --text: #073642;
+    --back: #FDF6E3;
+    --back-accent: #EEE8D5;
+    --accent: #D33682;
+}
+
+body[theme=hot-dog-stand]{
+    --text: white;
+    --back: red;
+    --accent: black;
+    --back-accent: yellow;
+    --delete: yellow;
+    --error: yellow;
+    --font: 'Comic Sans MS', cursive;
+}
+
+body[theme=monochrome]{
+    --text: rgb(180, 180, 180);
+    --back: rgb(70, 70, 70);
+    --back-accent: rgb(30, 30, 30);
+    --accent: rgb(120, 120, 120);
+}       
+
+body[theme=monochrome] *{
+    filter: grayscale(100%);
+}
+
+/* Theme Picker */
+.theme-palette{
+    position: fixed;
+    z-index: var(--z-theme);
+    right: 0;
+    bottom: 0;
+    background: none;
+    padding: 20px;
+}
+
+.theme-palette h3{
+    font-size: 30px;
+    background: none;
+}
+
+.theme-palette select{
+    text-align: right;
+    font-size: 25px;
+    padding: 5px;
+    border-color: var(--text);
+}
+
+.theme-palette option{
+    font-size: 20px;
+    text-align: right;
+}

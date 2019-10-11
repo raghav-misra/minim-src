@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Material+Icons+Round&display=swap');
+
+/* CSS Reset */
+*{
+    transition: 0.25s ease-in-out color, 0.25s text-decoration ease-in-out;
+    font-family: var(--font);
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    box-sizing: border-box;
+    color: var(--text);
+    outline: none;
+    text-decoration-skip-ink: none;
+    background-color: var(--back);
+}
+
+/* Z-Index Vars */
+:root{
+    --z-modal: 10;
+    --z-theme: 4;
+}
+
+/* Element Redesigns */
+::placeholder{
+    color: var(--text);
+}
+
+button{
+    border: 1px solid var(--text);
+    transition: 0.25s ease-in-out background;
+    font-size: 20px;
+    padding: 10px;
+}
+
+button:hover{
+    background: var(--accent);
+}
+
+input{
+    border: 1px solid var(--text);
+    font-size: 17.5px;
+    transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+}
+input:focus, input:hover{
+    background: var(--accent);
+}
+
+hr{
+    height: 0;
+    border: none;
+    border-top: 1px solid var(--text);
+    margin: 1%;
+}
+
+
+
+
+
