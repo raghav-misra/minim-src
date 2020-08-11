@@ -1,133 +1,132 @@
-.link-container{
-    background: none;
-    display: inline-block;
-    width: 50vw;
+.link-container {
+	background: none;
+	display: inline-block;
+	width: 50vw;
 }
 
-#userLinks{
-    background: none;
+#userLinks {
+	background: none;
 }
 
-.quicklink{
-    padding: 10px;
-    display: block;
-    margin: 10px;
-    background: none;
-    overflow: hidden;
-    height: 60px;
+.quicklink {
+	padding: var(--padding);
+	display: block;
+	margin: var(--margin);
+	background: none;
+	overflow: hidden;
+	height: 3.5rem;
 }
 
-
-.quicklink a{
-    background: none;
-    text-decoration: underline var(--accent);
-    margin-left: 10px;
+.quicklink a {
+	background: none;
+	text-decoration: underline var(--accent);
+	margin-left: var(--margin);
 }
 
-.quicklink:not(.new) .title::after{
-    font-family: 'Material Icons Round';
-    content: 'link';
-    margin-left: 10px;
-    font-weight: normal;
-    font-style: normal;
-    transform: rotate(-20deg);
-    color: var(--accent);
-    font-size: 30px;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-}
-  
-.quicklink .title{
-    cursor: pointer;
-    font-size: 40px;
-    background: none;
-    letter-spacing: 2px;
-    transition: 0.25s ease-in-out letter-spacing, 0.25s ease-in-out color;
+.quicklink:not(.new) .title::after {
+	font-family: "Material Icons Round";
+	content: "link";
+	margin-left: var(--margin);
+	font-weight: normal;
+	font-style: normal;
+	transform: rotate(-20deg);
+	color: var(--accent);
+	font-size: 1.75rem;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: "liga";
 }
 
-.quicklink.new .title{
-    font-size: 30px;
+.quicklink .title {
+	cursor: pointer;
+	font-size: 2.25rem;
+	background: none;
+	letter-spacing: calc(2 * var(--border));
+	transition: 0.25s ease-in-out letter-spacing, 0.25s ease-in-out color;
 }
 
-.quicklink:not(.new) .title:hover{
-    letter-spacing: 6px;
+.quicklink.new .title {
+	font-size: 1.75rem;
 }
 
-.quicklink .delete-link{
-    border: none;
-    padding: 0;
-    background: none;
+.quicklink:not(.new) .title:hover {
+	letter-spacing: calc(6 * var(--border));
 }
 
-.quicklink .delete-link i{
-    border: none;
-    width: 25px;
-    height: 25px;
-    padding: 0;
-    background: none;
+.quicklink .delete-link {
+	border: none;
+	padding: 0;
+	background: none;
 }
 
-.quicklink .delete-link i:hover{
-    color: var(--delete);
+.quicklink .delete-link i {
+	border: none;
+	width: 1.5rem;
+	height: 1.5rem;
+	padding: 0;
+	background: none;
+}
+
+.quicklink .delete-link i:hover {
+	color: var(--delete);
 }
 
 /* Link Creator Dialog */
-.link-overlay{
-    position: fixed;
-    z-index: var(--z-modal);
-    top: 0;
-    background: rgba(0, 0, 0, 0.411);
-    left: 0;
-    overflow: hidden;
-    width: 100vw;
-    display: flex;
-    transform: scale(0);
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    pointer-events: none;
+.link-overlay {
+	position: fixed;
+	z-index: var(--z-modal);
+	top: 0;
+	background: rgba(0, 0, 0, 0.411);
+	left: 0;
+	overflow: hidden;
+	width: 100vw;
+	display: flex;
+	transform: scale(0);
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	pointer-events: none;
 }
 
-.link-prompt{
-    background: var(--back-accent);
-    border: 1px solid var(--text);
-    width: 400px;
-    padding: 15px;
+.link-prompt {
+	background: var(--back-accent);
+	border: var(--border) solid var(--text);
+	width: 400px;
+	padding: 15px;
 }
 
-.link-prompt h1{
-    background: none;
-    margin: 10px;
-    margin-bottom: 15px;
+.link-prompt h1 {
+	background: none;
+	margin: var(--margin);
+	margin-bottom: 15px;
 }
 
-.link-prompt h2{
-    display: inline-block;
-    width: 75px;
+.link-prompt h2 {
+	display: inline-block;
+	width: 75px;
 }
 
-.link-prompt .input-field{
-    padding: 15px 10px;
-    display: flex;
-    line-height: 35px;
+.link-prompt .input-field {
+	padding: 15px 10px;
+	display: flex;
+	line-height: 35px;
 }
 
-.link-prompt input{
-    margin-left: 10px;
-    padding: 5px;
-    flex: 1;
-    vertical-align: top;
+.link-prompt input {
+	margin-left: 10px;
+	padding: 5px;
+	flex: 1;
+	vertical-align: top;
 }
 
-.link-prompt button{
-    margin: 15px 5px 5px 5px;
+.link-prompt button {
+	margin: 15px 5px 5px 5px;
 }
